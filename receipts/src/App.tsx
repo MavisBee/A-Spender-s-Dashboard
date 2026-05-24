@@ -7,10 +7,11 @@ import CategoryChart from "./components/CategoryChart";
 import DailyChart from "./components/DailyChart";
 import TotalSpend from "./components/TotalSpend";
 import { filterExpenses } from "./components/TotalSpend";
+import { SEED_EXPENSES } from "./seedData";
 import "./App.css";
 
 export default function App() {
-  const [expenses, setExpenses] = useLocalStorage<Expense[]>("receipts", []);
+  const [expenses, setExpenses] = useLocalStorage<Expense[]>("receipts", SEED_EXPENSES);
   const [filter, setFilter] = useLocalStorage<FilterPeriod>("receipts-filter", "this-week");
 
   const handleAdd = useCallback(
