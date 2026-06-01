@@ -1,0 +1,4 @@
+{
+  "buildCommand": "cd receipts && npm install && npm run build",
+  "outputDirectory": "receipts/dist"
+}
